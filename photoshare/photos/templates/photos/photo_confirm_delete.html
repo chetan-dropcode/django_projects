@@ -1,0 +1,26 @@
+<style>
+    .close {
+        box-shadow: none !important;
+    }
+</style>
+
+<!-- <!–Delete button will redirect to the href of the element with 'id = caller-id' property in this modal–> -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" caller-id="" role="dialog"
+    aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body confirm-delete">
+                Are you sure...You want to Delete this Photo..
+                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-block" data-dismiss="modal"
+                    id="confirmDeleteButtonModal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

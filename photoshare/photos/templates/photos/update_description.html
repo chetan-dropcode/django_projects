@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Nunito:wght@200&family=Roboto+Slab:wght@100;200;300;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            border: 25px solid transparent;
+            border-image: url("https://i.pinimg.com/originals/2d/74/c7/2d74c718d95e6db5ef28a6f0fe608a10.png") 14% round !important;
+            min-height: 100vh;
+            background: #bbbbbb;
+
+        }
+
+        .img-fluid {
+            border: 25px solid transparent;
+            border-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v191batch2-kul-02e_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=f130da9b1ac72e8a792ed9069912c2c1") 14% round;
+            /* transform: rotate(-15deg); */
+        }
+
+        .col-lg-8 {
+            background: #bbbbbb;
+            height: auto;
+            padding: 5px;
+
+            font-size: 25px;
+        }
+
+        textarea,
+        textarea:focus {
+            background: #bbbbbb !important;
+            width: 100%;
+            height: 85vh;
+            border: none !important;
+            box-shadow: none !important;
+            font-size: 20px !important;
+            font-family: 'Roboto Slab', serif;
+            box-sizing: border-box;
+            padding: 0px 5px;
+        }
+
+
+        .my-image {
+            font-size: 15px;
+        }
+
+        .btn-light,
+        .btn-light:hover {
+            background: none;
+            border: none;
+        }
+
+        .tox .tox-notification--in {
+            opacity: 0 !important;
+        }
+
+        .tox .tox-edit-area__iframe {
+            background: #bbbbbb !important;
+            min-height: 88vh;
+        }
+
+        .tox .tox-editor-container {
+            margin: 5px;
+        }
+
+        @media screen and (max-width:767px) {
+
+            body {
+                height: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="row">
+
+
+                {% csrf_token %}
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <div>
+                        <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
+                        <input type="submit" value="Save" class="btn btn-dark">
+                        <img class="img-fluid" src="{{update_des.image.url}}" alt="">
+                        {% if updade_des.image %}
+                        <img class="img-fluid" src="{{update_des.image.url}}" alt="">
+                        {% endif %}
+                        
+                        <input type="file" name="image" class="btn btn-sm btn-light">
+                        <!-- {{ form1.image}} -->
+
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-7 col-sm-12">
+
+
+                    <!-- {{form1.as_p}} -->
+                    <!-- {{form1.description}} -->
+                    <!-- <input class="form-control my-col-7" type="text" name="description" value="{{update_des.description}}"> -->
+                    <textarea id="mytextarea" class="form-control"
+                        name="description">{{update_des.description}}</textarea>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+
+        tinymce.init({
+
+            selector: "#mytextarea",
+            menubar: true,
+            // plugins: "emoticons | image",
+            plugins: [
+                'advlist autolink lists image ',
+                'insertdatetime table paste imagetools',
+                'template'
+            ],
+            template_mdate_format: '%m/%d/%Y : %H:%M',
+            templates: [
+                {
+                    title: 'Date modified example',
+                    description: 'Adds a timestamp indicating the last time the document modified with the username ',
+                    content: '<p>Last Modified: <time class="mdate">This will be replaced with the date modified.</time> by the username: {{request.user}}</p>'
+                },
+
+            ],
+            // toolbar: "menubar",
+            toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | image | template',
+            toolbar_location: "bottom",
+            
+            mobile: {
+                menubar: true
+            },
+        
+            statusbar: false,
+            forced_root_block: "", selector: 'textarea',
+            // plugins: 'image code',
+            // toolbar: 'unlink image',
+            // /* enable title field in the Image dialog*/
+            // image_title: true,
+            // /* enable automatic uploads of images represented by blob or data URIs*/
+            // automatic_uploads: true,
+            // /*
+            //   URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+            //   images_upload_url: 'postAcceptor.php',
+            //   here we add custom filepicker only to Image dialog
+            // */
+            // file_picker_types: 'image',
+            // /* and here's our custom image picker*/
+            // file_picker_callback: function (cb, value, meta) {
+            //     var input = document.createElement('input');
+            //     input.setAttribute('type', 'file');
+            //     input.setAttribute('accept', 'image/*');
+
+            //     /*
+            //       Note: In modern browsers input[type="file"] is functional without
+            //       even adding it to the DOM, but that might not be the case in some older
+            //       or quirky browsers like IE, so you might want to add it to the DOM
+            //       just in case, and visually hide it. And do not forget do remove it
+            //       once you do not need it anymore.
+            //     */
+
+            //     input.onchange = function () {
+            //         var file = this.files[0];
+
+            //         var reader = new FileReader();
+            //         reader.onload = function () {
+            //             /*
+            //               Note: Now we need to register the blob in TinyMCEs image blob
+            //               registry. In the next release this part hopefully won't be
+            //               necessary, as we are looking to handle it internally.
+            //             */
+            //             var id = 'blobid' + (new Date()).getTime();
+            //             var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+            //             var base64 = reader.result.split(',')[1];
+            //             var blobInfo = blobCache.create(id, file, base64);
+            //             blobCache.add(blobInfo);
+
+            //             /* call the callback and populate the Title field with the file name */
+            //             cb(blobInfo.blobUri(), { title: file.name });
+            //         };
+            //         reader.readAsDataURL(file);
+            //     };
+
+            //     input.click();
+            // },
+            // content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+    </script>
+</body>
+
+</html>
