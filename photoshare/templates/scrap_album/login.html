@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgb(219, 226, 226);
+        /* background-image: url("https://rowellphoto-rowellphotograph.netdna-ssl.com/wedding/wp-content/uploads/2014/10/romantic-toronto-beaches-engagement-pre-wedding-photos.jpg"); */
+        background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6");
+        text-shadow: 0 1px 0 rgb(209, 195, 195),
+            0 2px 0 #c9c9c9,
+            0 3px 0 #bbb,
+            0 4px 0 #b9b9b9,
+            0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, .1),
+            0 0 5px rgba(0, 0, 0, .1),
+            0 1px 3px rgba(0, 0, 0, .3),
+            0 3px 5px rgba(0, 0, 0, .2),
+            0 5px 10px rgba(0, 0, 0, .25),
+            0 10px 10px rgba(0, 0, 0, .2),
+            0 20px 20px rgba(0, 0, 0, .15);
+    }
+
+    .row {
+        background: white;
+        border-radius: 30px;
+        box-shadow: 12px 12px 22px 19px grey;
+    }
+
+    img {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        width: 100%;
+        height: 100%;
+        /* border-radius: 30px; */
+    }
+
+    .btn1 {
+        border: none;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.5s;
+        letter-spacing: 1px;
+    }
+
+    .btn1:hover {
+        /* background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6"); */
+        background-color: grey;
+        border: 1px solid;
+        color: black;
+
+    }
+
+    .col-lg-7 {
+        /* background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6"); */
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background: #d8d6d6;
+        padding: 3rem 3rem !important;
+    }
+
+    .my-col-12 {
+        background: #d8d6d6;
+        /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKk0UDgG_rFMEB8dz-pmBsLy28V-zpAnOU_A&usqp=CAU"); */
+        border-radius: 30px;
+        padding: 3rem 3rem !important;
+
+    }
+
+    label,
+    p {
+        font: 20px Bitter;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .btn-dark {
+        text-shadow: none;
+    }
+
+    .errorlist {
+        list-style: none;
+    }
+
+    .my-error {
+
+        color: red;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    @media screen and (max-width:992px) {
+        img {
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .col-lg-7 {
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 30px;
+            padding: 10px 10px !important;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .Form {
+            margin: 0 !important;
+            margin: 3rem 1rem !important;
+        }
+
+        .my-col-12 {
+            padding: 0 !important;
+            padding: 1rem 1rem !important;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+  <section class="Form my-4 mx-5">
+    <div class='container-fluid'>
+      <div class="row no-gutters">
+        <div class="col-lg-5 col-sm-12">
+          <img src="https://cdn.pixabay.com/photo/2019/04/02/19/42/beach-4098634_960_720.jpg"
+            alt="image">
+        </div>
+        <div class="col-lg-7">
+          <h1 class="font-weight-bold py-3">Login</h1>
+          <h4>Login to view photos and share with your friends</h4>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+              <div class="col-lg-12">
+                <label class="my-3" for="exampleInputEmail1">Username</label>
+                <input type="text" required class="form-control p-3 " name="username" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" placeholder="username">
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="col-lg-12">
+                <label class="my-3" for="exampleInputPassword1">Password</label>
+                <input type="password" required class="form-control p-3" name="password" id="exampleInputPassword1"
+                  placeholder="Password">
+              </div>
+            </div>
+            {% for message in messages %}
+            <br>
+            <p class="text-center my-error">{{message}}</p>
+            {% endfor %}
+            <div class="form-row">
+              <div class="col-lg-12">
+                <button type="submit" class="btn1 my-3">Submit</button>
+              </div>
+            </div>
+            <p class="text-center">Don't have an account? <a class="btn btn-dark" href="{% url 'register' %}">Register
+                here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

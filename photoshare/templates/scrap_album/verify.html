@@ -1,0 +1,71 @@
+{% extends 'scrap_album/base.html' %}
+
+{% block content %}
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: rgb(219, 226, 226);
+    /* background-image: url("https://rowellphoto-rowellphotograph.netdna-ssl.com/wedding/wp-content/uploads/2014/10/romantic-toronto-beaches-engagement-pre-wedding-photos.jpg"); */
+    background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6");
+    text-shadow: 0 1px 0 rgb(209, 195, 195),
+      0 2px 0 #c9c9c9,
+      0 3px 0 #bbb,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(0, 0, 0, .1),
+      0 0 5px rgba(0, 0, 0, .1),
+      0 1px 3px rgba(0, 0, 0, .3),
+      0 3px 5px rgba(0, 0, 0, .2),
+      0 5px 10px rgba(0, 0, 0, .25),
+      0 10px 10px rgba(0, 0, 0, .2),
+      0 20px 20px rgba(0, 0, 0, .15);
+  }
+
+  h1 {
+    text-align: center;
+
+  }
+
+  .btn1 {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 1px;
+  }
+
+  .btn1:hover {
+    /* background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6"); */
+    background-color: grey;
+    border: 1px solid;
+    color: black;
+
+  }
+  .card{
+    margin-top: 5rem;
+    padding: 15px;
+    border-radius: 30px;
+  }
+</style>
+<section class="container card ">
+  <h1>Verify your account</h1>
+  <form method="POST">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <button type="submit" class="btn1 my-3">Submit</button>
+  </form>
+
+</section>
+{% endblock %}

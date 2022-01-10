@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .body {
+            background: rgb(219, 226, 226);
+            /* background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6"); */
+
+        }
+
+        .image-thumbnail {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .list-group-item a {
+            text-decoration: none;
+            color: rgb(39, 34, 34);
+        }
+
+        .navbar-brand {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-right: 0.5rem;
+            cursor: pointer;
+            color: white !important;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .navbar-brand:hover,
+        .fa-user-circle:hover,
+        .title:hover {
+            color: cyan !important;
+        }
+
+        .sidebar {
+            /* margin: 0!important; */
+            overflow-y: auto;
+            position: fixed;
+            width: 250px;
+            left: -250px;
+            height: 100%;
+            background: #1b1b1b;
+            transition: left 0.4s ease;
+            margin-top: -1.5rem;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent !important;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bbbbbb;
+            border-radius: 10px;
+        }
+
+        .sidebar.show {
+            left: 0px;
+        }
+
+        .sidebar .text {
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 65px;
+            text-align: center;
+            background: #1e1e1e;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+
+        section ul {
+            background: #1e1e1e;
+            height: 100%;
+            width: 100%;
+            list-style: none;
+        }
+
+        section ul li {
+            line-height: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        section ul li a {
+            position: relative;
+            color: white;
+            text-decoration: none !important;
+            font-size: 18px;
+            padding-left: 40px;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            border-left: 3px solid transparent;
+        }
+
+        section ul li a:hover {
+            color: cyan;
+            background: #1e1e1e;
+            border-left-color: cyan;
+        }
+
+        .btn1 {
+            /* position: absolute; */
+            /* top: 15px; */
+            /* width: 45px;
+    height: 45px;
+     */
+            transition: left 0.4s ease;
+            cursor: pointer;
+        }
+
+        .btn1.click {
+            left: 260px;
+        }
+
+        .btn1 span {
+            font-size: 25px;
+        }
+
+        .btn1.click span:before {
+            content: '\f00d';
+        }
+
+        .card {
+            position: unset !important;
+            border: 25px solid transparent;
+            /* border-image: url("https://previews.123rf.com/images/jillbattaglia/jillbattaglia0807/jillbattaglia080700026/3306317-decorative-border-with-yellow-pencils-in-primary-colors-.jpg") 14% round !important; */
+            /* border-image: url("{{ STATIC_URL }}images/border_image.jpg") 14% round !important; */
+            border-image: url("/static/images/border_image.jpg") 14% round;
+
+            /* border : 10px solid rgb(89, 0, 255) */
+            /* transform: rotate(-5deg); */
+            background-image: url("https://us.123rf.com/450wm/mblach/mblach1609/mblach160900065/63955239-white-brick-wall-background.jpg?ver=6");
+
+        }
+
+        .card-body {
+            padding: 0.5rem;
+
+        }
+
+        .cat_name {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+            /* font-size: 1.5em ; */
+            font: 1.6em Bitter;
+            text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+            /* color: #333; */
+            text-shadow: 0 1px 0 rgb(209, 195, 195),
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0, 0, 0, .1),
+                0 0 5px rgba(0, 0, 0, .1),
+                0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .25),
+                0 10px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+        }
+
+        .col,
+        .col-1,
+        .col-10,
+        .col-11,
+        .col-12,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-auto,
+        .col-lg,
+        .col-lg-1,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-auto,
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-auto,
+        .col-sm,
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-auto,
+        .col-xl,
+        .col-xl-1,
+        .col-xl-10,
+        .col-xl-11,
+        .col-xl-12,
+        .col-xl-2,
+        .col-xl-3,
+        .col-xl-4,
+        .col-xl-5,
+        .col-xl-6,
+        .col-xl-7,
+        .col-xl-8,
+        .col-xl-9,
+        .col-xl-auto {
+            position: inherit !important;
+        }
+
+        .fa-user-circle {
+            font-size: 1.6rem;
+            color: white;
+        }
+
+        .fa-bars {
+            color: white;
+        }
+
+        .fixed-top {
+            background: #1e1e1e;
+        }
+
+        .title {
+            color: #0e3742;
+            font-size: 1.5rem;
+            text-align: center;
+            letter-spacing: 5px;
+            -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0004);
+            animation: animate 2s linear infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            18%,
+            20%,
+            50.1%,
+            60%,
+            65.1%,
+            80%,
+            90.1%,
+            92% {
+                color: #0e3742;
+                text-shadow: none;
+            }
+
+            18.1%,
+            20.1%,
+            30%,
+            50%,
+            60.1%,
+            80.1%,
+            90%,
+            92.1%,
+            100% {
+                color: cyan;
+                text-shadow: 0 0 10px #03bcf4;
+            }
+        }
+
+        .space {
+            margin-top: 5rem;
+        }
+
+        .no {
+            justify-content: center;
+            display: block;
+            margin: auto;
+        }
+
+        .close {
+            box-shadow: none !important;
+
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+           
+        }
+        .carousel-caption{
+            right: 1.5%;
+            opacity: 0;
+            left: unset !important;
+        }
+
+        @media screen and (max-width:700px) {
+            .title {
+                font-size: 1rem;
+                text-align: end;
+                letter-spacing: 3px;
+                margin: 5px;
+            }
+
+            .sidebar {
+                margin-top: -2rem;
+                height: 100%;
+                overflow-y: auto;
+            }
+
+            .justify-content-end {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+    <!-- *********** navbar ********** -->
+
+    <nav class="navbar navbar-light fixed-top">
+        <div class="btn1">
+            <span class="fas fa-bars"></span>
+        </div>
+        <p class="title">Scrap Memories</p>
+        {% if request.user.is_authenticated %}
+        <div class="justify-content-end">
+            <!-- <div class="navbar-brand h1 text-capitalize">{{request.user}}</div>
+            <div class="navbar-brand">
+                <i class="fas fa-user-circle"></i>
+            </div> -->
+            <div><img id="imgPreview" class=" mx-auto d-block avatar"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ARCtaFmFsHl-5AZ0somjClfxpKlXnIk0Ww&usqp=CAU"
+                alt="Avatar">
+                <div style="color: #fff;top: 0;" class="carousel-caption  d-md-block">
+                    <input type="file" name="photograph" id="photo" required="true" style="display: none;" />
+                    <p><label for="photo" style="cursor: pointer;"><i class="fa fa-pencil fa-2x"></i></label></p>
+                </div>
+                
+            </div>
+           
+            
+               
+               
+        </div>
+
+
+        {% endif %}
+    </nav>
+
+    <!-- *********** navbar end********** -->
+
+    <!-- *********** Photos section ********** -->
+
+    <div class="space">
+        <section class="sidebar">
+
+            <div class="text">
+                <!-- <img id="imgPreview" class=" mx-auto d-block avatar"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ARCtaFmFsHl-5AZ0somjClfxpKlXnIk0Ww&usqp=CAU"
+                    alt="Avatar">
+                <div style="color: #fff;top: 0;right: 0;margin-top: 4rem; opacity: 0;" class="carousel-caption  d-md-block">
+                    <input type="file" name="photograph" id="photo" required="true" style="display: none;" />
+                    <p><label for="photo" style="cursor: pointer;"><i class="fa fa-pencil fa-1.5x"></i></label></p>
+                </div> -->
+                
+                <!-- <h5>{{request.user}}</h5> -->
+                Categories
+            </div>
+            <ul>
+                <!-- <li><a href="#">Dashboard</a></li> -->
+                <li><a href="{% url 'gallery' %}">All</a></li>
+                {% for category in categories %}
+                <li class="text-capitalize"><a
+                        href="{% url 'gallery' %}?category={{category.name}}">{{category.name}}</a></li>
+                {% endfor %}
+
+
+
+                <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-md">Add Photo</a>
+
+                <a href="{% url 'logout' %}" class="btn btn-dark btn-block btn-md">Logout</a>
+
+
+                <!-- Button trigger modal -->
+                <a href="" class="btn btn-dark btn-block btn-md" data-toggle="modal" data-target="#exampleModal">
+                    Delete Category
+                </a>
+                <br><br><br>
+            </ul>
+        </section>
+        <div>
+            <div class="container-fluid">
+
+                <!-- <p class="font-weight-bold">Hello {{request.user}}</p> -->
+
+
+                <div class="row">
+                    <!-- <div class="col-md-3">
+    
+                        <div class="card">
+                            <div class="card-header">
+                                Categories
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="{% url 'gallery' %}">All</a></li>
+                                {% for category in categories %}
+                                <li class="list-group-item"><a
+                                        href="{% url 'gallery' %}?category={{category.name}}">{{category.name}}</a></li>
+                                {% endfor %}
+    
+                                <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm">Add Photo</a>
+    
+                                <a href="{% url 'logout' %}" class="btn btn-dark btn-block btn-sm">Logout</a>
+    
+                            </ul>
+                        </div>
+    
+                    </div> -->
+                    <div class="col-12">
+                        <div class="row">
+
+                            {% for photo in photos %}
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="card my-2">
+                                    <img class="image-thumbnail" src="{{photo.image.url}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="cat_name text-capitalize">Category : {{photo.category.name}}</p>
+                                    </div>
+                                    <a class="btn btn-dark btn-sm m-1" href="{% url 'photo' photo.id %}">View</a>
+                                    <!-- <a class="btn btn-dark" href="{% url 'update-description' photo.id %}">Update</a> -->
+                                    <!-- <a class="btn btn-dark btn-sm m-1" href="{% url 'photo-delete' photo.id %}" >Delete</a> -->
+
+                                    <!-- <a style="color: white;" class="btn btn-dark btn-sm m-1"  data-target="#exampleModal">Delete</a> -->
+                                    {% include 'scrap_album/photo_confirm_delete.html' %}
+
+                                    <a href="{% url 'photo-delete' photo.id %}"
+                                        class="confirm-delete btn btn-dark btn-sm m-1" title="Delete"
+                                        data-toggle="modal" data-target="#confirmDeleteModal"
+                                        id="deleteButton{{photo.id}}">
+                                        Delete</a>
+                                </div>
+                            </div>
+                            {% empty %}
+                            <div class="no">
+                                <h1>No photos uploaded in this category...</h1>
+                            </div>
+
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- *********** Photos section end********** -->
+
+    <!-- ********* Modal of Delete categores **********-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Categories</h5>
+                    <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% for category in categories %}
+                <div class="modal-footer text-capitalize">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <a href="{% url 'category-delete' category.id %}" class="btn btn-danger btn-block btn-md">Delete
+                        {{category.name}} category</a>
+
+                </div>
+                {% empty %}
+                <div class="text-center text-capitalize p-1">
+                    <h5>No categories to delete..</h5>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- ********** end of model **********-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        // vertical nav js code
+        $('.btn1').click(function () {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        // end of vertical nav js code
+
+        // delete photo js code
+        $(document).on('click', '.confirm-delete', function () {
+            $("#confirmDeleteModal").attr("caller-id", $(this).attr("id"));
+        });
+
+        $(document).on('click', '#confirmDeleteButtonModal', function () {
+            var caller = $("#confirmDeleteButtonModal").closest(".modal").attr("caller-id");
+            window.location = $("#".concat(caller)).attr("href");
+        });
+        // end of delete photo js code
+
+        // avtar change code 
+        $(document).ready(() => {
+            $('#photo').change(function () {
+                const file = this.files[0];
+                console.log(file);
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        console.log(event.target.result);
+                        $('#imgPreview').attr('src', event.target.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        }); 
+    </script>
+</body>
+
+</html>

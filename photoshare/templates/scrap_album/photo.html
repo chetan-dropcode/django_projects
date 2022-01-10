@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Photo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Nunito:wght@200&family=Roboto+Slab:wght@100;200;300;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            /* border: 25px solid transparent;
+            border-image: url("https://previews.123rf.com/images/jillbattaglia/jillbattaglia0807/jillbattaglia080700026/3306317-decorative-border-with-yellow-pencils-in-primary-colors-.jpg") 14% round !important;
+            min-height: 100vh; */
+            background: #bbbbbb;
+
+        }
+
+        .img-fluid {
+            border: 25px solid transparent;
+            border-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v191batch2-kul-02e_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=f130da9b1ac72e8a792ed9069912c2c1") 14% round;
+            /* transform: rotate(-15deg); */
+        }
+
+        .col-lg-7 {
+            background: #bbbbbb;
+            height: auto;
+            padding: 5px;
+
+            font-size: 25px;
+        }
+
+        [contenteditable] {
+            outline: 0px solid transparent;
+
+        }
+        textarea,textarea:focus{
+            background: #bbbbbb !important;
+            width: 100%;
+            height: 85vh;
+            border: none !important;
+            box-shadow: none !important;
+            font-size: 20px !important;
+            font-family: 'Roboto Slab', serif;
+        }
+        .btn-light,
+        .btn-light:hover {
+            background: none;
+            border: none;
+        }
+
+        .tox .tox-notification--in {
+            opacity: 0 !important;
+        }
+        .tox .tox-edit-area__iframe{
+            background: #bbbbbb !important;
+            
+        }
+        .tox-tinymce{
+            border: none !important;
+        }
+        @media screen and (max-width:767px) {
+            
+            body{
+                height: 100%;
+            }
+            
+        }
+        /* preloader styles */
+        #loading{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 999999;
+        }
+        section{
+            /* position: fixed; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(155, 145, 145);
+            animation: animateBg 10s linear infinite;
+        }
+        @keyframes animateBg {
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            100%{
+                filter: hue-rotate(360deg);
+            }
+        }
+        section .loader{
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+        section .loader span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(calc(18deg * var(--i)));
+        }
+        section .loader span::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            background: #00ff0a;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff0a,
+                        0 0 20px #00ff0a,
+                        0 0 40px #00ff0a,
+                        0 0 60px #00ff0a,
+                        0 0 80px #00ff0a,
+                        0 0 100px #00ff0a;
+            
+            animation: animate 2s linear infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes animate {
+            0%{
+                transform: scale(1);
+            }
+            80%,100%{
+                transform: scale(0);
+            }
+        }
+        .container-fluid{
+            border: 25px solid transparent;
+            border-image: url("https://previews.123rf.com/images/jillbattaglia/jillbattaglia0807/jillbattaglia080700026/3306317-decorative-border-with-yellow-pencils-in-primary-colors-.jpg") 14% round !important;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+
+    <section id="loading">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-5 col-md-7 col-sm-12">
+                <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
+                <a class="btn btn-dark" href="{% url 'update-description' photo.id %}">Update</a>
+                <button onclick="window.print()" class="btn btn-dark">Print</button>
+                <!-- <input type="button" class="btn btn-dark justify-content-end" onclick="saveEdits()"
+                    value="SAVE"></input> -->
+
+                <div>
+                    <img class="img-fluid" src="{{photo.image.url}}" alt="">
+                    <!-- <p>{{photo.description}}</p>
+                    <button class="btn btn-dark"><a href="">Update</a></button> -->
+                </div>
+
+
+
+            </div>
+
+
+            <div class="col-lg-7 col-md-5 col-sm-12">
+               
+                <textarea id="mytextarea" disabled class="form-control">{{photo.description}}</textarea>
+            </div>
+            
+
+
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: "#mytextarea",
+          
+            menubar: false,
+            toolbar : false,
+            statusbar: false,
+            forced_root_block : "",selector:'textarea',
+            readonly : 1
+        });
+        tinymce.activeEditor.getBody().setAttribute('contenteditable',false)
+    </script>
+
+    <script>
+        var preloader = document.getElementById('loading');
+        function myFunction(){
+            preloader.style.display = 'none'
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
