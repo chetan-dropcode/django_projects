@@ -1,0 +1,254 @@
+1 - make project as greatcart - django-admin startproject greatcart . - dot indicates that it will not create subfolder
+2 - make template and static folders configure both in setting
+3 - install this for static folder as - python manage.py collectstatic
+4 - then your static will work well also install pillow for images
+5 - in category create models as category by create app as - python manage.py startapp category
+6 - also make accounts as app 
+
+7 - in category e have created the models but now
+we will create custom models in acounts so to that first delete theexisting db file and also in category folder 
+migrations delete both initail and alter file
+
+8 - after this the models we have created in accounts that we hve to migrate. before migration just run the server and then do the migrations so 
+that the db file will be cretaed 
+
+9- after migration your admin will look different as it will have emailfield
+10 - crete superuser by typing as - winpty python manage.py ruserver if normal not works
+Email: coderead2@gmail.com
+Username: code
+First name: coder
+Last name: reader
+Password:STUdent@123
+Password (again):
+
+11 - make migrations of catgory by changing it if it not works type command as 
+python manage.py makemigrations category
+
+12 - add category in admin i.e 5 
+13 - to see db we have to install so that it can be readble
+download sql studio and extract the folder past in c program files and open the exe and afetr that you can load your file
+
+# working with products
+
+14- make a new app store 
+15 - make models and admin and migrate it and also add products
+16 - go to view and add the code so that we can see the product on homepage
+def home(request):
+    # if avaialble then only show 
+    products = Product.objects.all().filter(is_available=True)
+    
+    context = {
+        'products': products,
+        # 'reviews': reviews,
+    }
+    return render(request, 'home.html', context)
+
+17 - then go to home html and add for loop and also addd the product.product_name ,etc 
+18 - after that we can see all the products
+19 - make store url and page
+20 - make folderv store and make store,html and render it in views 
+21 - display the products dynamic by changing the urls in store.html
+22 - dyanamic iages and count 
+
+context processors and product details:
+23 - we are using a build in module called context_processor make file in category and configure in setting -> templates
+24 - go to navbar and add for loop and url in dropdown so that we can see the category
+25 - change the url href in navbar
+26 - then go to models and add the get url func 
+27 - now u can get category wise product by clicking on it
+28 - also make chamges in store so that u can click from there alse 
+
+product detail url and design
+29 - make url and also make function as product_detail in views and also make html file of product_detail
+30 - paste the code in product_detail
+31 - make the chages in models and make here 
+32 - also go to models and import get_url and make changes in home page
+33 - all links will work now
+34 - if stocks 0 show out of stock tag
+
+create new app carts
+1 - import url
+2 - paste the code in cart.html
+3 - create models and register it and make migrations
+4 - create func in views as add_cart,id and cart and make changes in cart.html as adding cart,increent,etc
+5 - added remove and decrement function in views 
+6 - add if else statement if cart present show or else show empty message
+7 -  fixing all links
+8 - added the functionality if product is already added show already added button and also view cart button added
+9 -make context_processorfile in cart to add functionality of counting in cart 
+10 -add the file name in seetings.py file in templates
+11 - make changes in navbr 
+
+paginator and search
+1 - search as django paginator u will see docs read that
+2 - go to store views and add tehe code by importing and editing
+3 - go to store.html and make changes in paginatorcode
+4 - as per documentation e have build this code so dont neewd to worry just go through it
+5 - u can edit in views for visible products how manty u want
+6 - make url of search add the code in store.html and also edit in navbar.html
+
+product variation and variation manager
+1- 1st add color and size code in form tag to get or post the data
+2 - go to cart views and add the code
+
+create variation models
+1 - make changes in cart.html views 
+
+registration login processors
+1- make register,login.htmls in acccount folder and also make urls
+2 - make form.pyfile and add the code
+3 - add the register logic in form.py file
+4- registrartion logic made succesful after that
+5 - go to django messgaes documentationread that 
+6- copy some code and paste it in seetings
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+7 - make alert.html file and add the code from documentation
+8 - then include it in register.html
+9 - if u ant to add timeout logic u can add it in script.js file 
+
+login functionality
+1 - add code in htmlfile add views but now only super admin can login no normal user can login since we 
+have not created the activation link 
+
+account activation and expiry links
+1- add activation code in accountviews.py file
+2 - make file as account verfication html file an add to it code
+autoescape is for protection
+3 - now go to seetings to config smtp 
+4 - after that make url 
+5 - make the func in views.py file
+6 - the mesage u can edit in login.html as verification messages
+
+
+dashboard
+1 - make url for dashboard
+2 - add code in dasboard,html and edit it in views
+3 - add url so that both wy works
+
+
+forget Password
+1 -make url for this
+2 - make template as forgotpassword.html
+3 - add the logic to views 
+4 - also make the password reset email.html 
+5 - make reset_password validate url
+6 - add logic into views of reset_validate get_url
+7 - make reset_password.html page and url
+8 - add logic of it and no it will work ckeck emial 
+
+
+cart checkout
+1 - make url for this in cart
+2 - make checkout.html
+3 - add the logic in views 
+4 - make user field in cart items model
+5 - agar cart mai add kiya hai kuch to jab checkout pai click kroge to vo login krne bolega after login
+jo data tha vo transfer hona chye uske liye logic in accounts views.py in login mai likna hai
+6 - install requests so that u can use it 
+
+order and order number generation
+1- make an app for orders
+2 - go to settings and add the appname
+3 - add models and register in admin 
+4 - make url for place order and make views and also make forms.py
+5 - make the logic of placeorder in vies so that the form data is stotrd in admin with the 
+unique order id
+6 - make url of payment and also make view of it
+
+payment integration
+1-make the setup for paypal
+2 - after processing the payment e can see the details of user in console 
+3 - now e have to send the dtails to backend database
+
+move cart items to order product table
+1 - add the code so that it will move it
+2 - by doing this the order will be stored and also after making payment it will clearthe cart
+
+send order receive email
+1 - add code in views.pt of order and also make html file order_receive
+2 -by doing this the email will be sent to you
+
+
+redirect the user to order completed page
+1 - go to order urls and make path
+2 - add code to views and make html file as order complete
+3 - we are sending the json response back to send data i.e payment.html 
+4 - make changes in payment.html 
+
+
+Review and rating models
+1 - make models in store.models as revierating
+2 -make forms.py file in store and add the code
+3 - goto product_detail,html page
+4 - edit code in that html
+5 - after this make the custom.css file 
+6 - add the font ausome link
+7 - make url in store as submit review
+8 - add the code in views by making subit_review function
+
+two-factor check for submitting reviews
+1 - edit code in product_detail function in store views so that if user has 
+purchasd the product then only he can submit the review
+
+rating avrage and review count calculation
+1 - add avgreview in moels store
+2 - make count also in modls and edit in product_detail.html
+
+my account functionalities dashboard
+1- create dashbord_sidebar.html 
+2 -goto accounts and edit dashboard fun in views
+3 - create myorder url in acccount
+4 - add code in views accounts
+5 - make myorder.html page
+6 - make models in account of userprofile and add it in admin
+
+edit profile setup
+1 - go to acounts and url and addthe path of edit profile
+2 - add thecode in view acoount and also make edit_profile.html page
+3 - ad the formsin form.py file acccount
+
+automatically create uer profile
+1 - add create userprofile code in regiter fun in account view
+
+change password
+1 - goto account and add url 
+2 - add the code in view account
+3 - mke the html file
+
+order detail page
+1 - make url in account and alo add code in view
+2 - make orderdetail page
+
+
+product gallerywith unlimited images
+1 - make model in store as  product gallery
+2 - regiter it
+3 - if you want to see the preview which u have added the photo then u have to install django-admin-thumbnails
+4 - pip install django-admin-thumbnails
+5 - add the photos in product from admin 
+6 - go to store views and add product_gallery code 
+7 - edit product_detail.html page
+8 - add css in custom.css
+9 - python manage.py collectstatic run this command
+10 - now when we click on photos it open in full screen so to avoid that we have to add jquery
+11- add jquery cdn in footer and alsso add code 
+
+if u want to sho rating on home page
+1  -goto greatcart views and add the code of review
+2 - (-created_date) if u add like this the pjotos will be in descending order
+3 - now go to home.html page and add the code
+
+
+django security measures
+1 - to make hide of sensitive information we have to install package
+2 - pip install python-decouple
+from decouple import config
+3 - import this in setting 
+4 - now create .env file in root folder
+5 - copy secret key and paste it in .env file 
+6- SECRET_KEY = config('SECRET_KEY') add this instead of that
+DEBUG = config('DEBUG',cast=bool)
+
