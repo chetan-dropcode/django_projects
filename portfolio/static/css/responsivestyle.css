@@ -1,0 +1,33 @@
+
+@media(max-width: 767px){
+    .navbar-custom a{
+        color: #000 !important;
+    }
+
+    .welcome-text .name-area{
+        font-size: 20px;
+    }
+
+    .welcome-text h1 {
+        font-size: 30px;
+    }
+    .fa{
+        font-size: 20px;
+    }
+
+    .navbar-brand{
+        line-height: unset;
+    }
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .section-padding-skills {
+        padding: 40px 0;
+    }
+
+    .gallery-items {
+        padding: 5px 0px;
+    }
+}
+
