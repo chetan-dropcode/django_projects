@@ -13,3 +13,6 @@ class HomeTemplateView(TemplateView):
         context['services'] = Service.objects.all()
         context['works'] = RecentWork.objects.all()
         return context
+
+def ideamagix(request):
+    return render(request,'ideamagix/index.html')

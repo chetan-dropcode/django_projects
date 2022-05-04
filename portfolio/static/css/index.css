@@ -1,0 +1,351 @@
+/* body{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+.part-1,.part-2,.part-3{
+    opacity: 0;
+}
+.part-1.animated,.part-2.animated,.part-3.animated{
+    opacity: 1;
+}
+html {
+    scroll-behavior: smooth;
+  }
+#header{
+    padding: 0;
+}
+.address i{
+    padding-top: 15px;
+    font-size: 25px;
+}
+.logo, .flag{
+    padding-top: 25px;
+}
+.fa-address-book-o,.fa-phone,.fa-calendar-times-o {
+    color: blue;
+}
+
+.dashedblue{
+    border-top: 2px dashed rgb(0, 208, 255);
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px; 
+    padding-right: 35px;
+}
+.navbar{
+    padding: 0 0.5rem;
+}
+/* knee image  */
+.arrow span{
+    color: red;
+    font-weight: bold;
+}
+
+.blueline span{
+    color: blue;
+    font-weight: bold;
+}
+/* image top */
+.carousel-caption {
+    right: unset;
+    left: unset;
+    text-align: unset;
+    padding-left: 15px;
+    top: 0;
+}
+/* overview */
+.bottom{
+    border-bottom: 1px solid rgb(216, 207, 207);
+}
+.bottom .navbar-nav .nav-link{
+    color: black;
+    position: relative;
+    padding-right: 25px;
+}
+.nav-item a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.nav-item a:hover:before{
+    width: 100%;
+    background-color: rgb(2, 2, 255);
+}
+
+
+
+/* treatment overview */
+.treatment{
+    align-items: center;
+}
+
+/* form  */
+.card h1{
+    color: blue;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.sidecard{
+    box-shadow: 1px 1px 6px;
+}
+
+/* blue dots */
+
+.bluedot li{
+    list-style: none;
+}
+.bluedot li::before{
+    content: '\25CB';
+    color: rgb(119, 119, 255);
+    font-size: 15px;
+    font-weight:bolder;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2em;
+}
+
+/* faqs */
+
+.faq li,.side{
+    list-style: none;
+    margin-left: -2.5em;
+}
+.faq span{
+    color: rgb(0, 208, 255);
+}
+
+.faqcard{
+    border: 1px solid rgb(0, 208, 255);
+    border-right: none;
+    border-left: none;
+    border-radius: unset;
+}
+
+.leftline{
+    border-left: 2px solid blue;
+    padding-left: 15px;
+}
+.cursor{
+    cursor: pointer;
+}
+/* carousel */
+
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+    display: none;
+}
+
+/* slider */
+
+.slider{
+    background-color:rgb(221, 248, 245);
+    height: 700px;
+    padding: 50px;
+}
+
+.doctor{
+    color: rgb(255, 71, 71);
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.doctor1{
+    color: rgb(0, 34, 255);
+}
+
+.slider2{
+    padding: 50px;
+}
+
+.Hospital{
+    color: rgb(255, 71, 71);
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.hospital1{
+    color: rgb(0, 34, 255);
+}
+.hospitalcard{
+    padding: 0;
+    border: 1px dashed red;
+}
+.hospitalpara{
+    color: rgb(255, 71, 71);
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+.pink{
+    height: 300px;
+    background-color: rgb(253, 196, 186);
+}
+
+/* ecxplore */
+
+.explore{
+    color: red;
+    text-decoration: underline;
+}
+
+/* footer */
+
+.footer1{
+    background-color: rgb(0, 149, 255);
+    color: #fff;
+    padding: 30px;
+}
+
+.dark{
+    background-color: rgb(30, 72, 226);
+    color: #fff;
+}
+
+.line{
+    border-right: 0.5px solid #fff;
+}
+
+.footer2{
+    background-color: rgb(11, 11, 37);
+    padding-top: 30px;
+    color: #fff;
+}
+
+.footer2 li{
+    list-style: none;
+    margin-left: -2em;
+}
+
+.col-sm-6{
+    width: unset;
+}
+
+div.box{
+    margin-top: -125px;
+}
+.box1{
+    color: black;
+}
+.col-md-3 li{
+    list-style: none;
+}
+
+/* second last section */
+
+.social i{
+    padding-right: 25px;
+    font-size: 35px;
+}
+.fa-facebook-official{
+    color: rgb(0, 62, 250);
+}
+.fa-twitter{
+    color: rgb(0, 179, 255);
+}
+.fa-instagram{
+    color: rgb(255, 96, 122);
+}
+.fa-youtube{
+    color: red;
+}
+.number{
+    color: rgb(0, 208, 255);
+    font-size: 25px;
+}
+
+/* footer last */
+
+.footer3{
+    background-color: rgb(0, 149, 255);
+    color: #fff;
+}
+.content p{
+    padding-top: 10px;
+}
+
+/* ###### */
+.splide__slide{
+    padding: 15px;
+}
+ul.splide__pagination{
+    bottom: 0;
+}
+button.splide__arrow{
+    display: none;
+}
+.fa-quote-right{
+    color: rgb(255, 96, 122);
+}
+.quote i{
+    font-size: 45px;
+    float: right;
+}
+.baby{
+    border-radius: 50%;
+}
+
+.owl-theme .owl-nav{
+    display: none;
+}
+
+button.splide__pagination__page.is-active{
+    background: blue;
+}
+
+@media(max-width:900px){
+    .bottom{
+        background-color:#007bff ;
+    }
+    .bottom .navbar-toggler-icon{
+       width: 100%;
+       height: 100%;
+    }
+    .bottom span{
+         padding-left: 0;
+    }
+    .bottom .navbar-nav .nav-link{
+        color: #fff;
+    }
+    div.box{
+        margin-top: unset;
+    }
+    .bluedot{
+        text-align: left;
+    }
+    .faq{
+        text-align: left;
+    }
+    
+    .topview{
+        display: none;
+    }
+    .myrow{
+        display: none;
+    }
+    .myh1{
+        font-size: 24px;
+    }
+    .number1{
+        font-size: 15px;
+    }
+    .mobilebtn{
+        font-size: unset;
+    }
+    .slider{
+        height: 740px !important;
+    }
+}

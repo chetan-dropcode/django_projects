@@ -21,6 +21,7 @@ class About(models.Model):
 class Service(models.Model):
     name = models.CharField(max_length=100,verbose_name="Service name")
     description = models.TextField(verbose_name="About service")
+    image = models.ImageField(upload_to='skills',default='default.png')
 
     def __str__(self):
         return self.name

@@ -56,7 +56,7 @@
 
                     <div style="text-align: center;" class="col-md-2 col-sm-4 col-xs-6">
                         <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
-                            <i class="icon icon-wallet"></i>
+                            <img src="{{service.image.url}}" style="width: 100% !important; border-radius: 50%;" alt="logo">
                             <h2>{{ service.name }}</h2>
                             <p>{{ service.description }}</p>
                         </div>
@@ -85,7 +85,8 @@
                             </a>
 
                             <div class="gallery-text">
-                                <h2>{{ work.title }}</h2>
+                               
+                                <a href="{% url 'ideamagix' %}"> <h2>{{ work.title }}</h2></a>
                             </div>
                         </div>
                     </div>

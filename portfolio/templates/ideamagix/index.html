@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ideamagix</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap4.min.css' %}">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <!-- 
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/splide.min.css' %}">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid " id="header">
+            <!-- header -->
+
+            <!-- <div class="container-fluid row topview">
+                <div class="col-2 logo">
+                    <img width="50" src="profile.png">Company
+                </div>
+                <div class="col-2 logo">
+                    <img width="50" style="border-radius: 50%;" src="baby.png">
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-1 address">
+                            <i class="fa fa-address-book-o"></i>
+                        </div>
+                        <div class="col-11">
+                            <p>second Media<br><b>Book Consulation</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-1 address">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="col-11">
+                            <p>call us on<br><b>Book Consulation</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-1 address">
+                            <i class="fa fa-calendar-times-o"></i>
+                        </div>
+                        <div class="col-11">
+                            <p>Email us on<br><b>info@mediretreats</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 flag">
+                    <img width="100px" height="60px" src="India.png">
+                </div>
+            </div> -->
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Treatments +</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Destinations +</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hospitals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Request A Quote</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+            </nav>
+
+            <!-- Knee image -->
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" height="600px" src="{% static 'css/nasa.jpg' %}" alt="First slide">
+                        <div class="carousel-caption d-md-block">
+                            <br>
+                            <div class="arrow">
+                                <a>Home<span> ></span></a>
+                                <a>Treatment<span> ></span></a>
+                                <a>Orthopaedics<span> ></span></a>
+                                <a>Knee Replacement</a>
+                            </div>
+                            <br>
+                            <h1>Total Knee Replacement</h1>
+                            <br>
+                            <p>Total knee replacement is a surgery to remove and replace the whole <br>damaged
+                                knee joint with an artifical joint
+                            </p>
+                            <br>
+                            <button type="button" class="btn btn-primary">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- overview  -->
+            <nav class="navbar navbar-expand-lg bottom">
+                <span class="navbar-toggler navbar-toggler-icon" data-toggle="collapse"
+                    data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></span>
+
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Overview</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Eligibility</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Preparation</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>About Treatment</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Post-Treatment Care</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Recovery Tips</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>FAQs</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Patient Stories</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <br><br>
+            <!--  -->
+        </div>
+    </header>
+
+    <!-- treatment -->
+    <div class="container-fluid ">
+        <!-- Treament overflow -->
+        <div class="row treatment ">
+            <div class="col-sm-12 col-md-6 content part-1">
+                <h2>Treatment Overview</h2>
+                <p>
+                    There are many variations of passages of , but the majority have suffered alteration in some form,
+                    by injected humour, or randomised words which don't look even slightly believable.
+                </p>
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).
+                </p>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 part-2">
+                <img class="img-fluid" src="{% static 'css/working.jpg' %}">
+            </div>
+        </div>
+
+        <hr class="dashedblue">
+
+        <!-- Eligibility for treatment -->
+        <div class="row">
+            <div class="col-sm-12 col-md-9">
+                <h2>Eligibility for Treatment</h2><br>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                    to generate Lorem Ipsum which looks reasonable.
+                </p><br>
+                <p>In general,gastric bypass could be a good option if:</p><br>
+                <ul class="bluedot">
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                    <li>But in certain circumstances and owing to the claims of duty or the obligations of business it
+                        will frequently occur that pleasures have to be repudiated and annoyances accepted.</li>
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                </ul>
+
+                <hr class="dashedblue">
+
+                <h2>Preparation Before Treatment</h2><br>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                    to generate Lorem Ipsum which looks reasonable.
+                </p><br>
+                <p>In general,gastric bypass could be a good option if:</p><br>
+                <ul class="bluedot">
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                    <li>But in certain circumstances and owing to the claims of duty or the obligations of business it
+                        will frequently occur that pleasures have to be repudiated and annoyances accepted.</li>
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                </ul>
+
+                <hr class="dashedblue">
+
+                <h2>About Treatment</h2><br>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                    to generate Lorem Ipsum which looks reasonable.
+                </p><br>
+                <p>In general,gastric bypass could be a good option if:</p><br>
+                <ul class="bluedot">
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                    <li>But in certain circumstances and owing to the claims of duty or the obligations of business it
+                        will frequently occur that pleasures have to be repudiated and annoyances accepted.</li>
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                </ul>
+
+                <hr class="dashedblue">
+
+                <h2>Post-Tratment Care Treatment</h2><br>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                    to generate Lorem Ipsum which looks reasonable.
+                </p><br>
+                <p>In general,gastric bypass could be a good option if:</p><br>
+                <ul class="bluedot">
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                    <li>But in certain circumstances and owing to the claims of duty or the obligations of business it
+                        will frequently occur that pleasures have to be repudiated and annoyances accepted.</li>
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                </ul>
+
+                <hr class="dashedblue">
+
+                <h2>Treatment Recovery Tips</h2><br>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                    to generate Lorem Ipsum which looks reasonable.
+                </p><br>
+                <p>In general,gastric bypass could be a good option if:</p><br>
+                <ul class="bluedot">
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                    <li>But in certain circumstances and owing to the claims of duty or the obligations of business it
+                        will frequently occur that pleasures have to be repudiated and annoyances accepted.</li>
+                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+                </ul>
+
+                <hr class="dashedblue">
+
+                <h2>Treatment FAQs</h2>
+                <hr>
+                <ul class="faq">
+                    <li><span>+ </span>Ho do i know the clinic i am searching is verified?</li>
+                    <hr class="side">
+                    <li><span>+ </span>I cant travel alone so can some family member or friend of mine accompany me?
+                    </li>
+                    <hr class="side">
+                    <li>
+                        <div>
+                            <span class="cursor"> - </span>Can I see my doctor before I decide and wat about my post
+                            recovery?
+                            <div class="card faqcard">
+                                <div class="card-body ">
+                                    <p class="leftline">Do a search for "Lorem ipsum" on the internet, is it a surprise
+                                        that hundreds of thousands of results are returned. There are a few reasons for
+                                        this, when you consider that most of the websites listed in the search results
+                                        contain "lorem ipsum" for no specific purpose:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li><span>+ </span>Ho do i know the clinic i am searching is verified?</li>
+                    <hr class="side">
+                </ul>
+                <br>
+
+                <hr class="dashedblue">
+
+                <div>
+                    <h2>Patient Stories and Videos</h2>
+                    <!-- <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5>Underment procedure for retinal detachment</h5>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <video controls class="w-100" src="goku.mp4"></video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5>Underment procedure for retinal detachment</h5>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>
+                                                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
+                                                Many veteran designers remember Lorem Ipsum text being available from Letraset in various font types and sizes. In 'Old School' graphic design where designers would lay out their design with paper and pen (without computer), text was taken using the Letraset pads and inserted (rubbed) into place. Letraset is still in business though beaus there are a lot of model makers out there who rely on Letraset adhesive letters.
+                                                Probably the transformation of Lorem Ipsum text into a digital
+                                            </p>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item"><h4>3</h4></div>
+                        <div class="item"><h4>4</h4></div>
+                        <div class="item"><h4>5</h4></div>
+                        <div class="item"><h4>6</h4></div>
+                    </div> -->
+                    <div id="card-slider" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5>Underment procedure for retinal detachment</h5>
+                                                </div>
+                                                <div class="col-6 quote">
+                                                    <i class="fa fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p>
+                                                        In publishing and graphic design, Lorem ipsum is a placeholder
+                                                        text commonly used to demonstrate the visual form of a document
+                                                        or a typeface without relying on meaningful content. Lorem ipsum
+                                                        may be used as a placeholder before final copy is available.
+                                                        Many veteran designers remember Lorem Ipsum text being available
+                                                        from Letraset in various font types and sizes. In 'Old School'
+                                                        graphic design where designers would lay out their design with
+                                                        paper and pen (without computer), text was taken using the
+                                                        Letraset pads and inserted (rubbed) into place. Letraset is
+                                                        still in business though beaus there are a lot of model makers
+                                                        out there who rely on Letraset adhesive letters adhesive
+                                                        letters.
+                                                    </p>
+                                                </div>
+                                            </div><br>
+                                            <div class="row myrow">
+                                                <div class="col-2">
+                                                    <img class="img-fluid baby" src="{% static 'css/baby.png' %}">
+                                                </div>
+                                                <div class="col-10">
+                                                    <h6>Luke Olfert</h6>
+                                                    <p>New York, USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5>Underment procedure for retinal detachment</h5>
+                                                </div>
+                                                <div class="col-6 quote">
+                                                    <i class="fa fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p>
+                                                        In publishing and graphic design, Lorem ipsum is a placeholder
+                                                        text commonly used to demonstrate the visual form of a document
+                                                        or a typeface without relying on meaningful content. Lorem ipsum
+                                                        may be used as a placeholder before final copy is available.
+                                                        Many veteran designers remember Lorem Ipsum text being available
+                                                        from Letraset in various font types and sizes. In 'Old School'
+                                                        graphic design where designers would lay out their design with
+                                                        paper and pen (without computer), text was taken using the
+                                                        Letraset pads and inserted (rubbed) into place. Letraset is
+                                                        still in business though beaus there are a lot of model makers
+                                                        out there who rely on Letraset adhesive letters adhesive
+                                                        letters.
+                                                    </p>
+                                                </div>
+                                            </div><br>
+                                            <div class="row myrow">
+                                                <div class="col-2">
+                                                    <img class="img-fluid baby" src="{% static 'css/baby.png' %}">
+                                                </div>
+                                                <div class="col-10">
+                                                    <h6>Luke Olfert</h6>
+                                                    <p>New York, USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5>Underment procedure for retinal detachment</h5>
+                                                </div>
+                                                <div class="col-6 quote">
+                                                    <i class="fa fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <video controls class="w-100" src="{% static 'css/goku.mp4' %}"></video>
+                                                </div>
+                                            </div><br>
+                                            <div class="row myrow">
+                                                <div class="col-2">
+                                                    <img class="img-fluid baby" src="{% static 'css/baby.png' %}">
+                                                </div>
+                                                <div class="col-10">
+                                                    <h6>Luke Olfert</h6>
+                                                    <p>New York, USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5>Underment procedure for retinal detachment</h5>
+                                                </div>
+                                                <div class="col-6 quote">
+                                                    <i class="fa fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p>
+                                                        In publishing and graphic design, Lorem ipsum is a placeholder
+                                                        text commonly used to demonstrate the visual form of a document
+                                                        or a typeface without relying on meaningful content. Lorem ipsum
+                                                        may be used as a placeholder before final copy is available.
+                                                        Many veteran designers remember Lorem Ipsum text being available
+                                                        from Letraset in various font types and sizes. In 'Old School'
+                                                        graphic design where designers would lay out their design with
+                                                        paper and pen (without computer), text was taken using the
+                                                        Letraset pads and inserted (rubbed) into place. Letraset is
+                                                        still in business though beaus there are a lot of model makers
+                                                        out there who rely on Letraset adhesive letters.
+                                                    </p>
+                                                </div>
+                                            </div><br>
+                                            <div class="row myrow">
+                                                <div class="col-2">
+                                                    <img class="img-fluid baby" src="{% static 'css/baby.png' %}">
+                                                </div>
+                                                <div class="col-10">
+                                                    <h6>Luke Olfert</h6>
+                                                    <p>New York, USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5>Underment procedure for retinal detachment</h5>
+                                                </div>
+                                                <div class="col-6 quote">
+                                                    <i class="fa fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <video controls class="w-100" src="{% static 'css/goku.mp4' %}"></video>
+                                                </div>
+                                            </div><br>
+                                            <div class="row myrow">
+                                                <div class="col-2">
+                                                    <img class="img-fluid baby" src="{% static 'css/baby.png' %}">
+                                                </div>
+                                                <div class="col-10">
+                                                    <h6>Luke Olfert</h6>
+                                                    <p>New York, USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5>Underment procedure for retinal detachment</h5>
+                                                </div>
+                                                <div class="col-6 quote">
+                                                    <i class="fa fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p>
+                                                        In publishing and graphic design, Lorem ipsum is a placeholder
+                                                        text commonly used to demonstrate the visual form of a document
+                                                        or a typeface without relying on meaningful content. Lorem ipsum
+                                                        may be used as a placeholder before final copy is available.
+                                                        Many veteran designers remember Lorem Ipsum text being available
+                                                        from Letraset in various font types and sizes. In 'Old School'
+                                                        graphic design where designers would lay out their design with
+                                                        paper and pen (without computer), text was taken using the
+                                                        Letraset pads and inserted (rubbed) into place. Letraset is
+                                                        still in business though beaus there are a lot of model makers
+                                                        out there who rely on Letraset adhesive letters.
+                                                    </p>
+                                                </div>
+                                            </div><br>
+                                            <div class="row myrow">
+                                                <div class="col-2">
+                                                    <img class="img-fluid baby" src="{% static 'css/baby.png' %}">
+                                                </div>
+                                                <div class="col-10">
+                                                    <h6>Luke Olfert</h6>
+                                                    <p>New York, USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="card sidecard">
+                    <div class="card-body">
+                        <div class="container">
+                            <h1><i>Need Help ?</i></h1>
+                            <p>Just let us know. We will be happy to assist you.</p>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" aria-describedby="fullname"
+                                        placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3"
+                                        placeholder="Describe Your Treatment Required"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block btn-lg">Send Enquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid slider part-2">
+        <h5 class="text-center doctor"><i>Doctors</i></h5>
+        <h3 class="text-center">Top Orthopaedic <span class="doctor1">Doctors</span></h3>
+        <br>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container pink">
+                        </div>
+                        <br>
+                        <h3 class="text-center doctor"><i>Dr.Faique Falke</i></h3>
+                        <h4 class="text-center">Musaffah Industrial - Abu Dhabi</h4>
+                        <p class="text-center">Doctor Degree & Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container pink">
+                        </div>
+                        <br>
+                        <h3 class="text-center doctor"><i>Dr.Faique Falke</i></h3>
+                        <h4 class="text-center">Musaffah Industrial - Abu Dhabi</h4>
+                        <p class="text-center">Doctor Degree & Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container pink">
+                        </div>
+                        <br>
+                        <h3 class="text-center doctor"><i>Dr.Faique Falke</i></h3>
+                        <h4 class="text-center">Musaffah Industrial - Abu Dhabi</h4>
+                        <p class="text-center">Doctor Degree & Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container pink">
+                        </div>
+                        <br>
+                        <h3 class="text-center doctor"><i>Dr.Faique Falke</i></h3>
+                        <h4 class="text-center">Musaffah Industrial - Abu Dhabi</h4>
+                        <p class="text-center">Doctor Degree & Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container pink">
+                        </div>
+                        <br>
+                        <h3 class="text-center doctor"><i>Dr.Faique Falke</i></h3>
+                        <h4 class="text-center">Musaffah Industrial - Abu Dhabi</h4>
+                        <p class="text-center">Doctor Degree & Specialist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container pink">
+                        </div>
+                        <br>
+                        <h3 class="text-center doctor"><i>Dr.Faique Falke</i></h3>
+                        <h4 class="text-center">Musaffah Industrial - Abu Dhabi</h4>
+                        <p class="text-center">Doctor Degree & Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid slider2 part-3">
+        <p class="text-center Hospital"><i>Hospitals</i></p>
+        <h3 class="text-center">Recommended <span class="hospital1">Hospitals</span></h3>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card">
+                    <div class="card-body hospitalcard">
+                        <div>
+                            <img class="img-fluid" src="{% static 'css/top.jpg' %}">
+                        </div>
+                        <br>
+                        <h5 class="text-center">Apollo Hospital</h5>
+                        <p class="text-center hospitalpara"><i>Bangalore</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body hospitalcard">
+                        <div>
+                            <img class="img-fluid" src="{% static 'css/top.jpg' %}">
+                        </div>
+                        <br>
+                        <h5 class="text-center">Medanta Hospital</h5>
+                        <p class="text-center hospitalpara"><i>Gurgaon</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body hospitalcard">
+                        <div>
+                            <img class="img-fluid" src="{% static 'css/top.jpg' %}">
+                        </div>
+                        <br>
+                        <h5 class="text-center">Jaslok Hospital</h5>
+                        <p class="text-center hospitalpara"><i>Mumbai</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body hospitalcard">
+                        <div>
+                            <img class="img-fluid" src="{% static 'css/top.jpg' %}">
+                        </div>
+                        <br>
+                        <h5 class="text-center">Apollo Hospital</h5>
+                        <p class="text-center hospitalpara"><i>Bangalore</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body hospitalcard">
+                        <div>
+                            <img class="img-fluid" src="{% static 'css/top.jpg' %}">
+                        </div>
+                        <br>
+                        <h5 class="text-center">Apollo Hospital</h5>
+                        <p class="text-center hospitalpara"><i>Bangalore</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-body hospitalcard">
+                        <div>
+                            <img class="img-fluid" src="{% static 'css/top.jpg' %}">
+                        </div>
+                        <br>
+                        <h5 class="text-center">Apollo Hospital</h5>
+                        <p class="text-center hospitalpara"><i>Bangalore</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <h5 class="text-center">Don't hesitate, contact us for better help and services. <a class="explore" href="#">Explore
+            all Hospitals</a></h5>
+    </div>
+    
+
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-xl-12 footer1">
+                <h5 class="text-center">Stay healthy and strong to enjoy life</h5>
+                <h1 class="text-center myh1">We have team of healthcare experts</h1>
+                <div class="row">
+                    <div class="col-6 line">
+                        <button type="button" class="btn  btn-lg float-right dark mobilebtn">Get in Touch</button>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="number1">+91 898 777 9999</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 footer2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 col-xl-3">
+                            <p>Important Links</p>
+                            <ul class="blueline">
+                                <li><span>- </span>Home</li>
+                                <li><span>- </span>About us</li>
+                                <li><span>- </span>FAQ</li>
+                                <li><span>- </span>Blog</li>
+                                <li><span>- </span>Contact Us</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <p>Important Links</p>
+                            <ul class="blueline">
+                                <li><span>- </span>Apollo Hospital</li>
+                                <li><span>- </span>Medta Hospital</li>
+                                <li><span>- </span>Max Hospital</li>
+                                <li><span>- </span>Sum Hospital</li>
+                                <li><span>- </span>VP Hospital</li>
+                                <li><span>- </span>Jaslok Hospital</li>
+                                <li><span>- </span>view all</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <p>Important Links</p>
+                            <ul class="blueline">
+                                <li><span>- </span>Knee</li>
+                                <li><span>- </span>Urologist</li>
+                                <li><span>- </span>Spine Surgeon</li>
+                                <li><span>- </span>ENT Surgeons</li>
+                                <li><span>- </span>Orthopedic</li>
+                                <li><span>- </span>Cardiologist</li>
+                                <li><span>- </span>view all</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 box">
+                            <div class="card box1">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img width="100%" height="100%" src="{% static 'css/avtar.jpg' %}">
+                                        </div>
+                                        <div class="col-9">
+                                            <p>Are you doctor/hospital<br><b>Join Mediretreats</b></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <p>Similar to reason 1, there is a word processing or dtp</p>
+                                </div>
+                            </div>
+                            <p>Important Links</p>
+                            <ul class="blueline">
+                                <li><span>- </span>Medical Tourism in India</li>
+                                <li><span>- </span>Medical Tourism in US</li>
+                                <li><span>- </span>Medical Tourism in Canada</li>
+                                <li><span>- </span>view all</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr style="border-bottom: 1px solid #fff;">
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="w-100" height="250px" src="{% static 'css/company.jpg' %}">
+                    </div>
+                    <div class="col-md-5">
+                        <h5>About Aafiya Mediretreats</h5>
+                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                            was born and I will give you a complete account of the system, and expound the actual
+                            teachings of the great explorer of the truth, the master-builder of human happiness. No one
+                            rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who
+                            do not know how to pursue pleasure rationally encounter consequences that are extremely
+                            painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+                            because it is pain, but because occasionally.</p>
+                    </div>
+                    <div class="col-md-3 sites">
+                        <h5>Follow Us On</h5>
+                        <div class="social">
+                            <i class="fa fa-facebook-official"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-youtube"></i>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Customer Services
+                                <br><span class="number">+91 9856555666</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 footer3">
+                <div class="content">
+                    <p class="text-center">Copyright @ 2020 Aafiya Mediretreats. All Rights Reserved. Designed by
+                        Ideamagix</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#card-slider', {
+                perPage: 2,
+                breakpoints: {
+                    980: {
+                        perPage: 1,
+                    }
+                }
+            }).mount();
+        })
+
+
+// var waypoint = new Waypoint({
+//   element: document.getElementById('px-offset-waypoint'),
+//   handler: function(direction) {
+//     notify('I am 20px from the top of the window')
+//   },
+//   offset: 20 
+// })
+
+// $(document).ready(function(){
+//     $('.part-1').waypoint(function(direction){
+//         $('.part-1').addClass('animated zoomIn')
+//     })
+// });
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/splide.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+
+        $(document).ready(function () {
+            $('.part-1').waypoint(function (direction) {
+                $('.part-1').addClass('animated fadeInUp')
+            }, {
+                offset: '500px'
+            });
+
+            $('.part-2').waypoint(function (direction) {
+                $('.part-2').addClass('animated zoomIn')
+            }, {
+                offset: '500px'
+            });
+
+            $('.part-3').waypoint(function (direction) {
+                $('.part-3').addClass('animated zoomIn')
+            }, {
+                offset: '500px'
+            });
+        });
+    </script>
+</body>
+
+</html>
