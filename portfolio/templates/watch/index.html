@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="crimson.css">
+    <link rel="stylesheet" href="responsive.css"> -->
+
+    <!-- live style switcher -->
+    <!-- <link rel="stylesheet" title="crimson" class="alternate-style" href="crimson.css" disabled>
+    <link rel="stylesheet" title="blue" class="alternate-style" href="blue.css" disabled>
+    <link rel="stylesheet" title="indigo" class="alternate-style" href="indigo.css" disabled>
+    <link rel="stylesheet" title="aqua" class="alternate-style" href="aqua.css" disabled>
+    <link rel="stylesheet" title="black" class="alternate-style" href="black.css" disabled>
+    <link rel="stylesheet" title="green" class="alternate-style" href="green.css" disabled>
+    
+    <link rel="stylesheet" href="styleSwitcher.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_watch.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/crimson.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+
+    <link rel="stylesheet" title="crimson" class="alternate-style" href="{% static 'css/crimson.css' %}" disabled>
+    <link rel="stylesheet" title="blue" class="alternate-style" href="{% static 'css/blue.css' %}" disabled>
+    <link rel="stylesheet" title="indigo" class="alternate-style" href="{% static 'css/indigo.css' %}" disabled>
+    <link rel="stylesheet" title="aqua" class="alternate-style" href="{% static 'css/aqua.css' %}" disabled>
+    <link rel="stylesheet" title="black" class="alternate-style" href="{% static 'css/black.css' %}" disabled>
+    <link rel="stylesheet" title="green" class="alternate-style" href="{% static 'css/green.css' %}" disabled>
+    
+    <link rel="stylesheet" href="{% static 'css/styleSwitcher.css' %}">
+    <title>watch</title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="67">
+
+    <!-- Header section -->
+    <header class="header fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="#"><span class="logo-circle"></span> unique</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">Faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home section -->
+    <section class="home-section" id="home">
+        <div class="bg-shapes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="home-content">
+                        <h1>Present your awesome product</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <a href="#" class="btn mybtn1">Buy For $150</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-first order-lg-last">
+                    <div class="home-img">
+                        <img src="{% static 'css/watch/watch-01.png' %}" alt="product">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <div class="about-img">
+                        <img class="img-fluid" src="{% static 'css/watch/watch-02.jpg' %}" alt="product">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-first order-lg-last">
+                    <div class="section-title">
+                        <h1 class="title">About Product</h1>
+                        <h2 class="subtitle">Awesome digital watch can make your life easier</h2>
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check"></i>Our all products are high qualitye</li>
+                            <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,</li>
+                            <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            </li>
+                            <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- feature section -->
+
+    <section class="features-section bg-light" id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h1 class="title">Features</h1>
+                        <h2 class="subtitle">Lorem ipsum dolor sit amet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="col-lg-12 features-item">
+                        <div class="icon"><i class="fas fa-bell"></i></div>
+                        <h3>Notification Alart</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="col-lg-12 features-item">
+                        <div class="icon"><i class="fab fa-bluetooth"></i></div>
+                        <h3>Bluetooth</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="col-lg-12 features-item">
+                        <div class="icon"><i class="fa fa-wifi"></i></div>
+                        <h3>Support Wifi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="col-lg-12 features-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>GPS Tracking</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="col-lg-12 features-item">
+                        <div class="icon"><i class="fas fa-comment"></i></div>
+                        <h3>Live Chat</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="col-lg-12 features-item">
+                        <div class="icon"><i class="fas fa-camera"></i></div>
+                        <h3>Camera</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- product section -->
+    <section class="product-section" id="products">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h1 class="title">Our Products</h1>
+                        <h2 class="subtitle">We have lots of excellent and high quality products</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel" id="product-carousel">
+                    <!-- product item start -->
+                    <div class="col-lg-12">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img class="img-fluid" src="{% static 'css/watch/products/1.jpg' %}" alt="product">
+                                <div class="overlay d-flex">
+                                    <a href="#" class="btn mybtn1">Buu Now</a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-price">
+                                    <span class="new-price">$49</span>
+                                    <span class="old-price">$95</span>
+                                </div>
+                                <h5 class="product-name">Simple product 001</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product item end -->
+                    <!-- product item start -->
+                    <div class="col-lg-12">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img class="img-fluid" src="{% static 'css/watch/products/2.jpg' %}" alt="product">
+                                <div class="overlay d-flex">
+                                    <a href="#" class="btn mybtn1">Buu Now</a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-price">
+                                    <span class="new-price">$49</span>
+                                    <span class="old-price">$95</span>
+                                </div>
+                                <h5 class="product-name">Simple product 002</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product item end -->
+                    <!-- product item start -->
+                    <div class="col-lg-12">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img class="img-fluid" src="{% static 'css/watch/products/3.jpg' %}" alt="product">
+                                <div class="overlay d-flex">
+                                    <a href="#" class="btn mybtn1">Buu Now</a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-price">
+                                    <span class="new-price">$49</span>
+                                    <span class="old-price">$95</span>
+                                </div>
+                                <h5 class="product-name">Simple product 003</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product item end -->
+                    <!-- product item start -->
+                    <div class="col-lg-12">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img class="img-fluid" src="{% static 'css/watch/products/4.jpg' %}" alt="product">
+                                <div class="overlay d-flex">
+                                    <a href="#" class="btn mybtn1">Buu Now</a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-price">
+                                    <span class="new-price">$49</span>
+                                    <span class="old-price">$95</span>
+                                </div>
+                                <h5 class="product-name">Simple product 004</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product item end -->
+                    <!-- product item start -->
+                    <div class="col-lg-12">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img class="img-fluid" src="{% static 'css/watch/products/5.jpg' %}" alt="product">
+                                <div class="overlay d-flex">
+                                    <a href="#" class="btn mybtn1">Buu Now</a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-price">
+                                    <span class="new-price">$49</span>
+                                    <span class="old-price">$95</span>
+                                </div>
+                                <h5 class="product-name">Simple product 005</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product item end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+
+    <section class="testimonial-section" style="background-image: url({% static 'css/watch/bg-01.jpg' %});" id="testimonial">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h1 class="title">Testimonial</h1>
+                        <h2 class="subtitle">Our Satisfied Customer Feedback</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel" id="product1-carousel">
+                    <!-- testi item start -->
+                    <div class="col-lg-12">
+                        <div class="testi-item">
+                            <div class="testi-comment">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <ul class="stars list-unstyled">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half-alt"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="client-info">
+                                <img src="{% static 'css/watch/testimonial/1.jpg' %}" alt="testi">
+                                <h5>Soshiv Upreti</h5>
+                                <p>CEO Webshala</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- testi-item end -->
+                    <!-- testi item start -->
+                    <div class="col-lg-12">
+                        <div class="testi-item">
+                            <div class="testi-comment">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <ul class="stars list-unstyled">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half-alt"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+
+                                </ul>
+                            </div>
+                            <div class="client-info">
+                                <img src="{% static 'css/watch/testimonial/2.jpg' %}" alt="testimonial">
+                                <h5>Pine Appple</h5>
+                                <p>CEO Webshala</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- testi-item end -->
+                    <!-- testi item start -->
+                    <div class="col-lg-12">
+                        <div class="testi-item">
+                            <div class="testi-comment">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <ul class="stars list-unstyled">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star-half-alt"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+
+                                </ul>
+                            </div>
+                            <div class="client-info">
+                                <img src="{% static 'css/watch/testimonial/3.jpg' %}" alt="testimonial">
+                                <h5>Jitender Kumar</h5>
+                                <p>CEO Webshala</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- testi-item end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faq section -->
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h1 class="title">Faq</h1>
+                        <h2 class="subtitle">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- faq iten tart -->
+                <div class="col-md-6">
+                    <div class="faq">
+                        <h4>How can I buy the watch?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- faq item end -->
+                <!-- faq iten tart -->
+                <div class="col-md-6">
+                    <div class="faq">
+                        <h4>How can I buy the watch?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- faq item end -->
+                <!-- faq iten tart -->
+                <div class="col-md-6">
+                    <div class="faq">
+                        <h4>How can I buy the watch?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- faq item end -->
+                <!-- faq iten tart -->
+                <div class="col-md-6">
+                    <div class="faq">
+                        <h4>How can I buy the watch?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- faq item end -->
+                <!-- faq iten tart -->
+                <div class="col-md-6">
+                    <div class="faq">
+                        <h4>How can I buy the watch?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- faq item end -->
+                <!-- faq iten tart -->
+                <div class="col-md-6">
+                    <div class="faq">
+                        <h4>How can I buy the watch?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- faq item end -->
+
+                <div class="col-lg-12 text-center">
+                    <p class="support-text">Any Question? <a href="#">info@domain.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News letter -->
+
+    <section class="newsletter-section" style="background-image: url({% static 'css/watch/bg-02.jpg' %});">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h1 class="title">Newsletter</h1>
+                        <h2 class="subtitle">Subscribe To Get Updates</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-7">
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Your Mail">
+                        </div>
+                        <button type="submit" class="btn mybtn2">
+                            <span>Subcribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h1 class="title">Contact us</h1>
+                        <h2 class="subtitle">Lorem ipsum dolor sit amet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn mybtn2">Send message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 order-first order-md-last">
+                    <!-- item start -->
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Location</h5>
+                        <p>B261 aqua Park, New Delhi,122222</p>
+                    </div>
+                    <!-- item end -->
+                    <!-- item start -->
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email</h5>
+                        <p>info@yourdomain.com</p>
+                    </div>
+                    <!-- item end -->
+                    <!-- item start -->
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Call us on</h5>
+                        <p>9100-000-000</p>
+                    </div>
+                    <!-- item end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="footer-logo">
+                        <a href="#"><span class="logo-circle"></span> unique</a>
+                    </div>
+                    <div class="footer-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        </p>
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright &copy; The Webshala 2021</p>
+        </div>
+    </footer>
+
+
+    <!-- live style -->
+
+    <div class="style-switcher">
+        <div class="toggle-style-switcher">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <h5>Style Switcher</h5>
+        <ul class="list-unstyled">
+            <li title="crimson" style="background-color: #d70d25;" onclick="setActiveStyle('crimson')"></li>
+            <li title="blue" style="background-color: #4948d4;" onclick="setActiveStyle('blue')"></li>
+            <li title="indigo" style="background-color: #6400ae;" onclick="setActiveStyle('indigo')"></li>
+            <li title="aqua" style="background-color: #05b3b6;" onclick="setActiveStyle('aqua')"></li>
+            <li title="black" style="background-color: #222222;" onclick="setActiveStyle('black')"></li>
+            <li title="black" style="background-color: #32cd32;" onclick="setActiveStyle('green')"></li>
+        </ul>
+    </div>
+
+
+   
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="main.js"></script>
+    <script src="styleSwitcher.js"></script> -->
+    <!-- <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script> -->
+<!--Latest version JQuery-->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="main.js"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+
+    <!-- <script src="{% static 'js/owl.carousel.js' %}"></script> -->
+    <script src="{% static 'js/main_copy.js' %}"></script>
+    <script src="{% static 'js/styleSwitcher.js' %}"></script>
+
+    
+</body>
+
+</html>

@@ -16,3 +16,6 @@ class HomeTemplateView(TemplateView):
 
 def ideamagix(request):
     return render(request,'ideamagix/index.html')
+
+def watch(request):
+    return render(request,'watch/index.html')
