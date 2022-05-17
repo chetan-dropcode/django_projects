@@ -609,23 +609,32 @@ h6 {
     background: #000000;
 }
 
+
+
 /*---8. Testimonial area css ends---*/
 
 /*--- 9. Invitation area css starts ---*/
 
 .invitation-area{
-    background: #333333;
+    /* background: #333333; */
+   
+    margin-top: 100px;
+    background-image: url('https://t4.ftcdn.net/jpg/04/30/71/13/240_F_430711369_YZIrnYKMsdb6hnTX85fl0yw3vwa24gRS.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #ffffff;
 }
 
 .single-invite h2 {
-    font-size: 27px;
+    font-size: 35px;
     line-height: 37px;
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
-    color: #ffffff;
+    color: #000;
 }
+
 .single-invite p {
     width: 70%;
     margin: auto;
@@ -642,7 +651,9 @@ h6 {
     margin-left: 5px;
     margin-right: 5px;
     font-size: 14px;
+    
 }
+
 
 /*--- invitation area ends ---*/
 
@@ -691,3 +702,42 @@ h6 {
 }
 
 /*--------------- Footer area ends -------------*/
+
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    text-align: center !important;
+    padding: 30px;
+}
+
+.rgt-bd{
+    border-right: 1px solid #000;
+    padding: unset;
+}
+
+.call{
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 250ms;
+}
+
+.call:hover{
+    transform: translateY(-10px);
+    background-color: rgba(214, 213, 213, 0.719) ;
+    cursor: pointer;
+}
+
+
+
+
+
+@media(max-width:990px){
+   
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        padding: unset;
+        padding: 15px !important;
+    }
+    .call{
+        margin-bottom: 20px;
+    }
+}

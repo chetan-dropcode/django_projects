@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% include 'includes/stylesheets.html' %}
 </head>
 <body>
@@ -28,7 +30,7 @@
                 <li><a class="smooth-menu" href="#about">About</a></li>
                 <li><a class="smooth-menu" href="#services">Skills</a></li>
                 <li><a class="smooth-menu" href="#portfolio">Portfolio</a></li>
-                <!-- <li><a class="smooth-menu" href="#testimonial">Testimonial</a></li> -->
+                <li><a class="smooth-menu" href="#quali">Qualification</a></li>
                 <li><a class="smooth-menu" href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -46,6 +48,7 @@
         </div>
     </div>
 </div>
+
 {% include 'includes/scripts.html' %}
 </body>
 </html>
