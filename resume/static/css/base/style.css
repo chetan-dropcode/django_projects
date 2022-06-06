@@ -11,6 +11,10 @@ html{
     scroll-behavior: smooth;
 }
 
+.table-responsive,.modal-content{
+    border-radius: 20px;
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -407,9 +411,9 @@ section .title::after{
     width: 60%;
 }
 
-/* teams section styling */
+/* teams section styling  project */
 .teams .title::after{
-    content: "who with me";
+    content: "what i have";
 }
 .teams .carousel .card{
     background: #222;
@@ -471,6 +475,7 @@ section .title::after{
 }
 
 /* contact section styling */
+
 .contact .title::after{
     content: "get in touch";
 }
