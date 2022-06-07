@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<div class="header-bar">
+<div class="my-header-bar">
     <h1>Register</h1>
 </div>
 
-<div class="card-body">
+<div class="my-card-body">
     <form action="" method="POST">
         {% csrf_token %}
         <label for="">{{form.username.label}}</label>
@@ -22,7 +22,7 @@
         <input  class="button loginbtn" type="submit" value="Register" id="">
 
     </form>
-    <p class="login">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    <p class="my-login">Already have an account? <a href="{% url 'login' %}">Login</a></p>
 </div>
 
 

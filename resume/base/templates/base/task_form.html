@@ -3,11 +3,11 @@
 
 {% block content %}
 
-<div class="header-bar">
+<div class="my-header-bar">
     <a href="{% url 'tasks' %}">&#8592; Back</a>
 </div>
 
-<div class="card-body">
+<div class="my-card-body">
     <form action="" method="POST">
         {% csrf_token %}
         {{form.as_p}}

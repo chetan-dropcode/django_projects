@@ -5,15 +5,15 @@
 {% block content %}
 
 
-<div class="header-bar">
+<div class="my-header-bar">
     <a href="{% url 'tasks' %}">&#8592; Back</a>
 </div>
 
 
-<div class="card-body">
+<div class="my-card-body">
     <form action="" method="POST">
         {% csrf_token %}
-        <p class="login">Are you sure you want ot delete? "{{task}}"</p>
+        <p class="my-login">Are you sure you want ot delete? "{{task}}"</p>
         <input class="button loginbtn" type="submit" value="Delete">
     </form>
 </div>
