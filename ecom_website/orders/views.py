@@ -174,7 +174,8 @@ def place_order(request, total=0, quantity=0,):
                 'cart_items': cart_items,
                 'total': total,
                 'tax': tax,
-                'payment':payment
+                'payment':payment,
+                'grand_total':grand_total,
             }
            
 
@@ -231,6 +232,7 @@ def order_complete(request):
             'order': order,
             'ordered_products': ordered_products,
             'order_number': order.order_number,
+            'cart_items': cart_items,
             # 'transID': payment.payment_id,
             # 'payment': payment,
             'subtotal': subtotal,

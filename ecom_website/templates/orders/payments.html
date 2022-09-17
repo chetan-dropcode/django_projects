@@ -2,7 +2,30 @@
 {% load static %}
 
 {% block content %}
-
+<div id="payModal" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-danger">Instruction</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h5 class="w3-center text-center">Hello Users. You can make payment by entering any dummy number and email-id
+				  
+				  </h5>
+				  <h6>PHONE-NO:- <span class="text-warning"> 9898989898</span></h6>
+				  <h6>EMAIL-ID :- <span class="text-warning">Test@gmail.com</span></h6>
+				  <br>
+				
+			</div>
+			<!-- <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div> -->
+		</div>
+	</div>
+  </div>
 
 <section class="section-content padding-y bg">
 	<div class="container">
@@ -28,13 +51,13 @@
 
 					</div>
 				</div>
-				<div class="card">
+				<!-- <div class="card">
 					<h5 class="card-header">Payment Method</h5>
 					<div class="card-body">
 						<p class="card-text">PayPal</p>
 
 					</div>
-				</div>
+				</div> -->
 				<div class="card">
 					<h5 class="card-header">Review Products</h5>
 					<div class="card-body">
@@ -111,7 +134,7 @@
 
 
 
-						<button id="mine"  >Pay </button>
+						<button id="mine" class="btn btn-block btn-primary"  >Pay </button>
 					</div> <!-- card-body.// -->
 				</div> <!-- card.// -->
 				<div class="alert alert-danger" role="alert">
