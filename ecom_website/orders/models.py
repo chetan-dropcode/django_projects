@@ -2,7 +2,7 @@ from django.db import models
 from accounts.models import Account
 from store.models import Product, Variation
 
-
+from django.utils.timezone import datetime
 
 class Payment(models.Model):
     user = models.ForeignKey(Account, on_delete=models.CASCADE)
@@ -42,7 +42,7 @@ class Order(models.Model):
     status = models.CharField(max_length=10, choices=STATUS, default='New')
     ip = models.CharField(blank=True, max_length=20)
     is_ordered = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(default=datetime.now,blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 
